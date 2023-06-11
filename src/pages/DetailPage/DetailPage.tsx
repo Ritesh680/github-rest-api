@@ -38,7 +38,11 @@ const DetailPage = () => {
 		},
 	];
 	return (
-		<div>
+		<div className="flex flex-col">
+			<div className="flex px-4 bg-gray-100 py-6 gap-4">
+				<img src="/git-repository-icon.svg" className="w-6" />
+				<p className="font-bold text-blue-500">{data?.full_name}</p>
+			</div>
 			<TabContainer tabs={tabs} />
 		</div>
 	);
