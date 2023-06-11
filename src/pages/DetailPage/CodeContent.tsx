@@ -41,7 +41,6 @@ const CodeContent = ({
 			);
 	}, [branch, branchUrl]);
 
-	console.log(commitData);
 	return (
 		<div className="p-4 flex flex-col gap-4">
 			<div className="flex justify-between items-center">
