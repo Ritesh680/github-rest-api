@@ -6,14 +6,14 @@ import { IssuesAPI } from "@/interfaces";
 const IssueContent = ({ data }: { data: IssuesAPI[] }) => {
 	const [currentPage, setCurrentPage] = useState<number>(1);
 	return (
-		<div className="border rounded-md  p-4 m-4">
+		<div className="border rounded-md p-4 m-4">
 			<div className="border-b py-2 bg-gray-50">
 				<span className="font-bold text-sm">{data?.length} open Issues</span>
 			</div>
 			{data?.map((d) => (
 				<div
 					key={d.id}
-					className="flex flex-col border-b py-2 hover:bg-gray-50 cursor-pointer"
+					className="flex flex-col border-b py-5 px-2 hover:bg-gray-50 cursor-pointer gap-3"
 				>
 					<a
 						href={d?.html_url}
