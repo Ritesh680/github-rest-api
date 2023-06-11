@@ -35,6 +35,8 @@ const RepositoryDataDisplay = ({
 		starData: 0,
 		language: "",
 		license: "",
+		watchers_count: 0,
+		fork_count: 0,
 		topics: [],
 	};
 	const [gitData, setGitData] = useState(initialState);
@@ -42,6 +44,8 @@ const RepositoryDataDisplay = ({
 		getStars(owner, repo).then((res: any) =>
 			setGitData({
 				starData: res?.stargazers_count,
+				fork_count: res?.forks,
+				watchers_count: res?.watchers_count,
 				language: res?.language,
 				license: res?.license?.name,
 				topics: [],
