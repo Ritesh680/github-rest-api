@@ -1,6 +1,7 @@
-import SearchBar from "../Searchbar";
-import Filter from "../Filter";
 import { useState } from "react";
+
+import SearchBar from "../Searchbar";
+import Filter from "../FilterDropdown";
 
 const Navbar = ({
 	handleFilterChange,
@@ -44,9 +45,9 @@ const Navbar = ({
 							xmlns="http://www.w3.org/2000/svg"
 						>
 							<path
-								fill-rule="evenodd"
+								fillRule="evenodd"
 								d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-								clip-rule="evenodd"
+								clipRule="evenodd"
 							></path>
 						</svg>
 					</div>
@@ -69,6 +70,7 @@ const Navbar = ({
 									{ label: "Users", value: "users" },
 								]}
 								handleChange={handleFilterChange}
+								extraStyles="text-neutral-50"
 							/>
 						</li>
 					</ul>
