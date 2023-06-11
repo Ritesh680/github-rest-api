@@ -15,8 +15,8 @@ const Filter = ({
 		handleChange(e.target.value);
 	};
 	return (
-		<div className={`border rounded text-white w-fit px-4 ${extraStyles}`}>
-			<span>{filterName || "Filter"}</span>
+		<div className={`border rounded w-fit px-4 ${extraStyles}`}>
+			<span>{filterName || "Filter:"}</span>
 			<select
 				onChange={handleFilterChange}
 				className="border p-3 rounded-md outline-none bg-transparent  border-none"
